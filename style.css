@@ -5,22 +5,13 @@
     box-padding: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677 , #4e085f);
+    padding: 10px;
 
-.container {
-    max-width: 400px;
-    margin: 32px auto;
-    padding: 16px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-
 .todo-app{
     width:100%;
     max-width: 100vh;
@@ -35,19 +26,22 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    font-size: 1.3rem;
-    gap: 8px;
+    
 }
 
-.todo-app img {
-    width: 28px;
-    height: 28px;
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
 }
 
 .row{
     display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
 }
 
 input{
@@ -56,20 +50,18 @@ input{
     outline: none;
     background: transparent;
     padding: 10px;
-    padding: 8px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    
 }
 
 button{
-    padding: 8px 16px;
-    font-size: 1rem;
-    background: #0078d7;
-    color: #fff;
     border: none;
-    border-radius: 5px;
+    outline: none;
+    padding: 16px 50px;
+    background: #41b310ff;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 40px;
 }
 
 ul li{
@@ -79,11 +71,6 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
-    padding: 8px;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 ul li::before{
@@ -122,28 +109,5 @@ ul li span{
 }
 ul li span:hover{
     background: #edeef0 ;
-}
-
-/* Mobile styles */
-@media (max-width: 500px) {
-    .container {
-        max-width: 98vw;
-        padding: 8px;
-    }
-    .todo-app h2 {
-        font-size: 1rem;
-    }
-    .row {
-        flex-direction: column;
-        gap: 6px;
-    }
-    button, #input-box {
-        font-size: 0.95rem;
-        padding: 7px;
-    }
-    .todo-app img {
-        width: 22px;
-        height: 22px;
-    }
 }
 
